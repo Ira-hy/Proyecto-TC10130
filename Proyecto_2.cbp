@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Proyecto_2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Proyecto_2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Proyecto_2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Episodio.cpp" />
+		<Unit filename="Episodio.h" />
+		<Unit filename="Pelicula-1.csv" />
+		<Unit filename="Pelicula.cpp" />
+		<Unit filename="Pelicula.h" />
+		<Unit filename="Pelicula.h.gch" />
+		<Unit filename="Peliculas.cpp" />
+		<Unit filename="Peliculas.h" />
+		<Unit filename="Proyecto 4.layout" />
+		<Unit filename="Proyecto_2.cbp" />
+		<Unit filename="Proyecto_2.depend" />
+		<Unit filename="Serie.cpp" />
+		<Unit filename="Serie.h" />
+		<Unit filename="Series.cpp" />
+		<Unit filename="Series.h" />
+		<Unit filename="Video.cpp" />
+		<Unit filename="Video.h" />
+		<Unit filename="Video.h.gch" />
+		<Unit filename="main-2.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
