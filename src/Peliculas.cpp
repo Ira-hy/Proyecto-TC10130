@@ -71,6 +71,7 @@ void Peliculas::leerArchivo(){
 
         // Desplegamos en la consola la pelicula con el metodo str() de pelicula
         cout << "Dentro del objeto: " << arrPtrPeliculas[cantidad]->str() << endl;
+        cantidad++;
     }
     fin.close();
     // Se sale del ciclo cuando ya no existen mas lineas en el archivo
