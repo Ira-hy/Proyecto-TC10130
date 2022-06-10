@@ -8,7 +8,7 @@ Serie::Serie():Video(){
 	//episodios;
 }
 
-Serie::Serie(string _iD, string _titulo,int _duracion, string _genero, double _calificacionPromedio):Video(_iD, _titulo, _duracion, _genero, 0){
+Serie::Serie(string _iD, string _titulo,int _duracion, string _genero, double _calificacionPromedio):Video(_iD, _titulo, _duracion, _genero, _calificacionPromedio){
 	cantidad = 0;
 	//episodios;
 }
@@ -38,7 +38,6 @@ Episodio Serie::getEpisodio(int _index){
 int Serie::getCantidad(){
 	return cantidad;
 }
-
 
 double Serie::calculaCalPromedio(){
 	double acum = 0;
@@ -70,3 +69,13 @@ string Serie::str(){
         "\n-----------------"
     );
 }
+
+ostream &operator<<(ostream &out, const Serie &s){
+    string acum = "\n";
+    for (int index = 0; index < s.cantidad; index++){
+        acum = acum + to_string(index) + '-' + s.Episodios[index].str() + "\n";
+    }
+    out << s.iD << ',' << s.titulo << ',' << s.duracion << ',' << s.genero << ',' << s.calificacionPromedio << acum;
+    return out;
+}
+

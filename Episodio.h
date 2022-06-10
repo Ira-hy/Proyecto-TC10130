@@ -12,22 +12,22 @@ class Episodio{
 		string titulo;
 		int temporada;
 		int calificacion;
-		
+
 	public:
 		Episodio();
 		Episodio(string _titulo, int _temporada, int _calificacion);
-		
+
 	//Metodos Modificadores - Setters
 	void setTitulo(string _titulo);
 	void setTemporada(int _Temporada);
 	void setCalificacion(int _calificacion);
-	
+
 	//Metodos de acceso - Getters
 	string getTitulo();
 	int getTemporada();
 	int getCalificacion();
-	
-	string str();
+
+	string str() const;
 };
 
 #endif

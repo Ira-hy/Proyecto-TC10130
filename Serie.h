@@ -31,5 +31,7 @@ class Serie:public Video{
 		//Otros Metodos
 		double calculaCalPromedio();
 		string str();
+
+		friend ostream &operator<<(ostream &out, const Serie &s);
 };
 #endif

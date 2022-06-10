@@ -26,7 +26,6 @@ void Episodio::setTemporada(int _temporada){
 void Episodio::setCalificacion(int _calificacion){
 	calificacion = _calificacion;
 }
-
 //Metodos de acceso - Getters
 string Episodio::getTitulo(){
 	return titulo;
@@ -38,6 +37,6 @@ int Episodio::getCalificacion(){
 	return calificacion;
 }
 
-string Episodio::str(){
-	return "Episodio\nTitulo: " + titulo + "\nTemporada: " + to_string(temporada) + "\nCalificacion" + to_string(calificacion) + "\n------------------";
+string Episodio::str()const{
+	return  titulo + ',' + to_string(temporada) + ',' + to_string(calificacion) + "\n------------------";
 }

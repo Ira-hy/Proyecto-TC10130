@@ -1,6 +1,7 @@
 #include "Peliculas.h"
 
 Peliculas::Peliculas(){
+    cantidad = 0;
 }
 
 // Metodos modificadores - Setters
@@ -16,10 +17,15 @@ void Peliculas::setCantidadPeliculas(int _cantidad){
 
 // Metodos de acceso - getters
 Pelicula * Peliculas::getPtrPelicula(string _iD){
-    return new Pelicula();
+    for (int iR = 0; iR < cantidad; iR++){
+        if(arrPtrPeliculas[iR]->getId()==_iD){
+            return arrPtrPeliculas[iR];
+        }
+    }
+    return nullptr;
 }
 int Peliculas::getCantidadPeliculas(){
-    return 0;
+    return cantidad;
 }
 
 //Otros metodos
@@ -33,12 +39,13 @@ void Peliculas::leerArchivo(){
 
     //Abrir archivo de entrada
 
-    fin.open("Pelicula-1.csv",ios::in);
+    fin.open("C:\\Users\\Irahy\\Desktop\\TEC\\Materias\\Semestre 2\\Periodo 3\\POO\\Proyecto_2_Meromero\\Pelicula-1.csv",ios::in);
 
     // inicializar el atributo cantidad 0
     cantidad = 0;
     // leer una línea del archivo y la almaneca en line
     while (getline(fin,line)){
+
         // despliega en consola la linea - BORRAR o COMENTAR cout´s
         // cout << cantidad << line << endl;
 
@@ -60,20 +67,20 @@ void Peliculas::leerArchivo(){
         // stod - funcion que convierte un string a double
 
         arrPtrPeliculas[cantidad] = new Pelicula(row[0],row[1],stoi(row[2]),row[3],stod(row[4]),stoi(row[5]));
-        cantidad++;
-        // Se muestra en consola la separación - BORRAR o COMENTAR cout's
 
-        cout << "Id: " << row[0] << "\n";
+        // Se muestra en consola la separación - BORRAR o COMENTAR cout's
+        /*cout << "Id: " << row[0] << "\n";
         cout << "Titulo: " << row[1] << "\n";
-       /* cout << "Duración: " << row[2] << "\n";
+        cout << "Duración: " << row[2] << "\n";
         cout << "Genero: " << row[3] << "\n";
         cout << "Calificación: " << row[4] << "\n";
         cout << "Oscares: " << row[5] << "\n";
         cout << endl;*/
 
         // Desplegamos en consola la pelicula con el metodo str() de pelicula - BORRAR o COMENTAR cout's
+        // cout << "Dentro del objeto: " << arrPtrPeliculas[cantidad]->str() << endl;
 
-        /*cout << "Dentro del objeto: " << arrPtrPeliculas[cantidad]->str() << endl;*/
+        cantidad++;
     }
     fin.close();
 
@@ -81,17 +88,15 @@ void Peliculas::leerArchivo(){
 
     //Desplegar todas las peliculas leidas - BORRAR o COMENTAR ciclo con cout's
 
-    for (int iR = 0; iR < cantidad; iR++){
+    /*for (int iR = 0; iR < cantidad; iR++){
         cout << iR << "-" << arrPtrPeliculas[iR]->str() << endl;
-    }
+    }*/
 }
 void Peliculas::reporteTodasLasPeliculas(){
-    int count = 0;
     for (int iR = 0; iR < cantidad;iR++){
-        cout << arrPtrPeliculas[iR]->getTitulo() << endl;
-        count++;
+        cout << arrPtrPeliculas[iR]->str() << endl;
     }
-    if (count == 0){
+    if (cantidad == 0){
         cout << "No hay peliculas" << endl;
     }
 }
@@ -111,10 +116,9 @@ void Peliculas::reporteConCalificacion(double _calificacionPromedio){
 
 void Peliculas::reporteGenero(string _genero){
     int count = 0;
-    for (int iR = 0; iR < sizeof(arrPtrPeliculas);iR++){
-        cout << arrPtrPeliculas[iR]->getGenero();
+    for (int iR = 0; iR < cantidad; iR++){
         if(arrPtrPeliculas[iR]->getGenero() == _genero){
-            cout << arrPtrPeliculas[iR]->str() << endl; // ¿Me debe de imprimir las peliculas que son de?
+            cout << iR << ' ' << *arrPtrPeliculas[iR];
             count++;
         }
     }

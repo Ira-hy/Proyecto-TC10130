@@ -8,10 +8,10 @@
 
 
 #include <iostream>
-#include "Peliculas.hpp"
+#include "Peliculas.h"
 int menuPeliculas(){
     int iOpcion;
-    /*
+
     cout <<
     "\n ** Peliculas " <<
     "\n1. Leer Peliculas  desde Archivo" <<
@@ -19,7 +19,7 @@ int menuPeliculas(){
     "\n3. Reporte de peliculas que tienen cierta Calificacion" <<
     "\n4. Reporte de peliculas de cierto genero" <<
     "\n0. SALIR\nTeclea la opcion:";
-    */
+
     cin >> iOpcion;
     return iOpcion;
 }
@@ -29,15 +29,15 @@ int menuPeliculas(){
 int main() {
     // se manda llamar al constructor - default
     Peliculas peliculas{};
-    
+
     int iOpcion;
     string sGenero, sId;
     double dCal;
-  
+
     // Leer el archivo de peliculas y cargarlo en el arreglo de apuntadores
     // dentro de la clase Peliculas
     peliculas.leerArchivo();
-    
+
     // 1o Inicializar la vcc antes del ciclo
     iOpcion = menuPeliculas();
     // 2a Incluir en la condicion la vcc

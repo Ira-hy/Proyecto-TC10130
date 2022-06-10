@@ -45,12 +45,13 @@
 		<Unit filename="Proyecto_2.depend" />
 		<Unit filename="Serie.cpp" />
 		<Unit filename="Serie.h" />
+		<Unit filename="Serie2021.csv" />
 		<Unit filename="Series.cpp" />
 		<Unit filename="Series.h" />
 		<Unit filename="Video.cpp" />
 		<Unit filename="Video.h" />
 		<Unit filename="Video.h.gch" />
-		<Unit filename="main-2.cpp" />
+		<Unit filename="main_series.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

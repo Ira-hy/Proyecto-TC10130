@@ -1,10 +1,10 @@
+#ifndef Pelicula_h
+#define Pelicula_h
+
 #include <stdio.h>
 #include <iostream>
 
 using namespace std;
-
-#ifndef Pelicula_h
-#define Pelicula_h
 
 #include "Video.h"
 
@@ -22,6 +22,9 @@ class Pelicula:public Video{
 
 	// Metodos de acceso - Getters
 	int getOscares();
+
+	// sobre carga de operadores
+	friend ostream &operator<<(ostream &out, const Pelicula &p);
 
 	//otros metodos
 	string str();

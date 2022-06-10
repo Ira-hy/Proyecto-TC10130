@@ -21,7 +21,7 @@ void Series::leerArchivo(){
 
     // **************** LEER LAS SERIES *****************
 
-    lectura.open("Serie2021.csv",ios::in);
+    lectura.open("C:\\Users\\Irahy\\Desktop\\TEC\\Materias\\Semestre 2\\Periodo 3\\POO\\Proyecto_2_Meromero\\Serie2021.csv",ios::in);
     // inicialiar el atributo cantidad de Series con 0
     cantidad = 0;
     // ciclo para leer todo el archivo
@@ -45,7 +45,7 @@ void Series::leerArchivo(){
     lectura.close();
 
     // ******************* LEER LOS EPISODIOS DE LAS SERIES ****************
-    lectura.open("Episodio2021.csv", ios::in);
+    lectura.open("C:\\Users\\Irahy\\Desktop\\TEC\\Materias\\Semestre 2\\Periodo 3\\POO\\Proyecto_2_Meromero\\Episodio2021.csv", ios::in);
     // ciclo para leer todo el archivo
     while (getline(lectura,linea)){
         // Desplegar el apisodio leido - solo para corroborar
@@ -123,12 +123,21 @@ void Series::reporteTodasLasSeries(){
     }
 }
 
+/*
+void series::reporteSeries(){
+    for (int iR = 0; iR < cantidad; iR++){
+        acum =
+    }
+
+}
+*/
+
 // Reporte de todas las Series del arreglo arrPtrSeries que tiene cierta calificación
 // Despliega todas las series cuya calificacionPromedio sea igual a la recibida en
 // el parámetro de entrada _calificacion -- usa str() para desplegar la info de la Serie
 void Series::reporteConCalificacion(double _calificacion){
     int count = 0;
-    for (int iR = 0; iR < cantidad;iR++){
+    for (int iR = 0; iR < cantidad; iR++){
         if(arrPtrSeries[iR]->getCalificacion() == _calificacion){
             cout << arrPtrSeries[iR]->str() << endl;
             count++;
@@ -156,7 +165,9 @@ void Series::reporteGenero(string _genero){
 // manda a llamar al método calculaPromedio de la serie de la clase Serie para
 // que se calcule la calificación promedio de la Serie
 void Series::calcularCalificacionSeries(){
-        for (int iR = 0; iR < sizeof(arrPtrSeries);iR++){
-            arrPtrSeries[iR]->calculaCalPromedio();
-        }
+    for (int iR = 0; iR < cantidad;iR++){
+       /* if (arrPtrSeries[iR]->){}
+        for (int iE = 0; iR){
+            arrPtrSeries[iR]->();
+        }*/
 }

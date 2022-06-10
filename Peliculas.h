@@ -3,6 +3,7 @@
 
 #include <sstream>
 #include <fstream>
+#include <string>
 #include <stdio.h>
 #include <iostream>
 
@@ -21,7 +22,7 @@ class Peliculas{
     public:
         //Metodo constructor
         Peliculas();
-        Peliculas(string _iD, string _titulo, int _duracion, string _genero, double _calicacionPromedio, int _oscares);
+        //Peliculas(string _iD, string _titulo, int _duracion, string _genero, double _calicacionPromedio, int _oscares);
 
         //Metodos modificadores (set)
         void setPtrPelicula(Pelicula * _pelicula);
