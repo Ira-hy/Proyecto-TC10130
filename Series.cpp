@@ -21,39 +21,39 @@ void Series::leerArchivo(){
 
     // **************** LEER LAS SERIES *****************
 
-    lectura.open("C:\\Users\\Irahy\\Desktop\\TEC\\Materias\\Semestre 2\\Periodo 3\\POO\\Proyecto_2_Meromero\\Serie2021.csv",ios::in);
+    lectura.open("D:\\Users\\Irahy\\Documents\\GitHub\\Proyecto-TC10130\\Serie2021.csv",ios::in);
     // inicialiar el atributo cantidad de Series con 0
     cantidad = 0;
     // ciclo para leer todo el archivo
     while (getline(lectura, linea)){ // lee una línea del archivo, corresponde a una serie
         // Para que la mando a desplegar? para verificar que se está leyendo correctamente el archivo
-        cout << linea << endl; // BORRAR
+        //cout << linea << endl; // BORRAR ***********************************************************************************
         std::stringstream registro(linea);
         iRow = 0;
         // ciclo para separar los elementos de la serie (string)
         while (getline(registro, dato, ',')){
-            cout << dato << endl;
+            //cout << dato << endl; // ***************************************************************
             row[iRow++] = dato;
         }
         // crear un objeto de la clase Serie, new retorna un pointer
         arrPtrSeries[cantidad] = new Serie(row[0], row[1], stoi(row[2]), row[3],stod(row[4],0));
         // Para verificar si se inicializo correctamente el objeto
-        arrPtrSeries[cantidad] -> str(); // BORRAR
+        //arrPtrSeries[cantidad] -> str(); // BORRAR
         // vamos por la siguiente serie del archivo, se incremente para la siguiente cantidad
         cantidad++;
     }
     lectura.close();
 
     // ******************* LEER LOS EPISODIOS DE LAS SERIES ****************
-    lectura.open("C:\\Users\\Irahy\\Desktop\\TEC\\Materias\\Semestre 2\\Periodo 3\\POO\\Proyecto_2_Meromero\\Episodio2021.csv", ios::in);
+    lectura.open("D:\\Users\\Irahy\\Documents\\GitHub\\Proyecto-TC10130\\Episodio2021.csv", ios::in);
     // ciclo para leer todo el archivo
     while (getline(lectura,linea)){
         // Desplegar el apisodio leido - solo para corroborar
-        cout << linea << endl; // BORRAR
+        //cout << linea << endl; // BORRAR ************************************************
         std::stringstream registro(linea);
 
         iRow = 0;
-        while (getline(registro,dato,',')){ // Separar los datos del apisodio desde la linea registro
+        while (getline(registro, dato,',')){ // Separar los datos del apisodio desde la linea registro
             row[iRow++] = dato;
         } // al salir de aqui ya se separo toda la línea
 
@@ -70,7 +70,7 @@ void Series::leerArchivo(){
             arrPtrSeries[iS]->setEpisodio(cantEpisodios, *(episodio));
             arrPtrSeries[iS]->setCantidad(++cantEpisodios);
         }
-        cout << arrPtrSeries[iS]->str() << endl; // BORRAR ***
+        cout << arrPtrSeries[iS]->str() << endl; // BORRAR **************************************************
     }
     lectura.close();
 
@@ -84,7 +84,7 @@ void Series::leerArchivo(){
 // Se asigna ese apuntador al arrPtrSeries[cantidad] en la posición actual que tenga
 // actualmente el atributo cantidad
 void Series::setPtrSerie(Serie *ptr){
-    for (int iR = 0; iR < cantidad;iR++){
+    for (int iR = 0; iR < cantidad; iR++){
         arrPtrSeries[iR] = ptr;
     }
 }
@@ -102,7 +102,7 @@ Serie* Series::getPtrSerie(string _iD){
             return arrPtrSeries[iR];
         }
     }
-    return NULL;
+    return nullptr;
 }
 
 // Retorna el valor del tributo cantidad
@@ -113,24 +113,29 @@ int Series::getCantidadSeries(){
 // Reporte de todas las series que estan en el arreglo arrPtrSeries:
 // despliega todas las series contenidas en el arreglo - usa ->str()
 void Series::reporteTodasLasSeries(){
-    int count = 0;
+    double acum = 0;
+    double mean = 0;
+    for (int iR = 0; iR < cantidad; iR++){
+        cout << '*' << *arrPtrSeries[iR] << endl;
+        acum = acum + arrPtrSeries[iR]->getCalificacion();
+    }
+    if (cantidad > 0) // IF DUDOSO
+    mean = acum/cantidad;
+    cout << "Promedio: " + to_string(mean) << endl;
+
+    /*for (int iR = 0; iR < cantidad; iR++){
+        cout << '*' << *arrPtrSeries[iR] << endl; // BUENARRDOOOOOOOOOO
+    }*/
+
+    /*int count = 0;
     for (int iR = 0; iR < cantidad;iR++){
             cout << arrPtrSeries[iR]->str()<< endl;
             count++;
     }
     if (count == 0){
         cout << "No hay Series" << endl;
-    }
+    }*/
 }
-
-/*
-void series::reporteSeries(){
-    for (int iR = 0; iR < cantidad; iR++){
-        acum =
-    }
-
-}
-*/
 
 // Reporte de todas las Series del arreglo arrPtrSeries que tiene cierta calificación
 // Despliega todas las series cuya calificacionPromedio sea igual a la recibida en
@@ -139,7 +144,7 @@ void Series::reporteConCalificacion(double _calificacion){
     int count = 0;
     for (int iR = 0; iR < cantidad; iR++){
         if(arrPtrSeries[iR]->getCalificacion() == _calificacion){
-            cout << arrPtrSeries[iR]->str() << endl;
+            cout << '*' << *arrPtrSeries[iR] << endl;
             count++;
         }
     }
@@ -155,7 +160,7 @@ void Series::reporteGenero(string _genero){
     int count = 0;
     for (int iR = 0; iR < cantidad;iR++){
         if(arrPtrSeries[iR]->getGenero() == _genero){
-            cout << arrPtrSeries[iR]->str() << endl;
+            cout << '*' << *arrPtrSeries[iR] << endl;
             count++;
         }
     }
@@ -164,10 +169,12 @@ void Series::reporteGenero(string _genero){
 // Calcular la califción de cada serie en base a sus episodios
 // manda a llamar al método calculaPromedio de la serie de la clase Serie para
 // que se calcule la calificación promedio de la Serie
-void Series::calcularCalificacionSeries(){
-    for (int iR = 0; iR < cantidad;iR++){
-       /* if (arrPtrSeries[iR]->){}
-        for (int iE = 0; iR){
-            arrPtrSeries[iR]->();
+void Series::calcularCalificacionSeries(){ // FALTA TERMINAR DE CODIFICAR
+    for (int iR = 0; iR < cantidad; iR++){
+        //cout << *arrPtrSeries[iR] << endl;
+        //cout << arrPtrSeries[iR]->str() << endl;
+        /*if (arrPtrSeries[iR]->getId() == Pelicula().getId()){
+            cout << arrPtrSeries[iR]->calculaCalPromedio() << endl;
         }*/
+    }
 }

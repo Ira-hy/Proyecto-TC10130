@@ -8,7 +8,7 @@ using namespace std;
 
 #include "Video.h"
 
-class Pelicula:public Video{
+class Pelicula: public Video{
 	// Private section
 	private:
 		int oscares;
@@ -24,7 +24,7 @@ class Pelicula:public Video{
 	int getOscares();
 
 	// sobre carga de operadores
-	friend ostream &operator<<(ostream &out, const Pelicula &p);
+	friend ostream &operator << (ostream &out, const Pelicula &p);
 
 	//otros metodos
 	string str();

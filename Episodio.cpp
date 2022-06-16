@@ -6,7 +6,7 @@
 using namespace std;
 
 Episodio::Episodio(){
-	titulo = "la era de hielo";
+	titulo = "Episodio Prueba";
 	temporada = 1;
 	calificacion = 10;
 }
@@ -38,5 +38,5 @@ int Episodio::getCalificacion(){
 }
 
 string Episodio::str()const{
-	return  titulo + ',' + to_string(temporada) + ',' + to_string(calificacion) + "\n------------------";
+	return  titulo + ',' + to_string(temporada) + ',' + to_string(calificacion);
 }

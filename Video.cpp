@@ -1,4 +1,4 @@
-#include <string> 
+#include <string>
 #include <cstdlib>
 
 
@@ -36,7 +36,7 @@ void Video::setGenero(string _genero){
 void Video::setCalificacion(double _calificacionPromedio){
 	calificacionPromedio = _calificacionPromedio;
 }
-	
+
 //Metodos de ACCESO - Getters
 string Video::getId(){
 	return iD;
@@ -44,7 +44,7 @@ string Video::getId(){
 string Video::getTitulo(){
 	return titulo;
 }
-int Video::getDuracion(){	
+int Video::getDuracion(){
 	return duracion;
 }
 string Video::getGenero(){
@@ -56,11 +56,5 @@ double Video::getCalificacion(){
 
 //Otros metodos
 string Video::str(){
-	return (
-	"Id: " + iD + 
-	"\nTitulo: " + titulo + 
-	"\nDuracion (min): " + to_string(duracion) + 
-	"\nGenero: " + genero + 
-	"\nCalificacion promedio: " + to_string(calificacionPromedio) + 
-	"\n-----------------");
+	return iD + ',' + titulo + ',' + to_string(duracion) + ',' + genero + ',' + to_string(calificacionPromedio);
 }

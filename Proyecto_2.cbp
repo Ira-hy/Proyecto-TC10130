@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="Episodio.cpp" />
 		<Unit filename="Episodio.h" />
+		<Unit filename="Episodio2021.csv" />
 		<Unit filename="Pelicula-1.csv" />
 		<Unit filename="Pelicula.cpp" />
 		<Unit filename="Pelicula.h" />

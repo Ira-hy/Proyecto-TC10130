@@ -15,7 +15,8 @@ Serie::Serie(string _iD, string _titulo,int _duracion, string _genero, double _c
 
 void Serie::setEpisodio(int _index, Episodio _episodios){
     if (cantidad >= 0 && _index < cantidad){
-        index = _index;
+        Episodios[_index] = _episodios;
+        cantidad = cantidad + 1;
     }
 }
 
@@ -60,14 +61,7 @@ string Serie::str(){
         acum = acum + Episodios[index].str() + "\n";
 	}
 
-	return (
-        "Id: " + iD +
-        "\nTitulo: " + titulo +
-        "\nDuracion (min): " + to_string(duracion) +
-        "\nGenero: " + genero +
-        "\nCalificacion promedio: " + to_string(calificacionPromedio) +
-        "\n-----------------"
-    );
+	return iD + ',' +titulo + ',' + to_string(duracion) + ',' + genero + ',' + to_string(calificacionPromedio) + acum;
 }
 
 ostream &operator<<(ostream &out, const Serie &s){
@@ -78,4 +72,3 @@ ostream &operator<<(ostream &out, const Serie &s){
     out << s.iD << ',' << s.titulo << ',' << s.duracion << ',' << s.genero << ',' << s.calificacionPromedio << acum;
     return out;
 }
-

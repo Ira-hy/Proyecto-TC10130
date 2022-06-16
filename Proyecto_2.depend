@@ -138,3 +138,70 @@
 	<cstdlib>
 	"Video.h"
 
+1655349070 source:d:\users\irahy\documents\github\proyecto-tc10130\episodio.cpp
+	<string>
+	<cstdlib>
+	"Episodio.h"
+
+1655338374 d:\users\irahy\documents\github\proyecto-tc10130\episodio.h
+	<stdio.h>
+	<iostream>
+
+1654902965 source:d:\users\irahy\documents\github\proyecto-tc10130\main_series.cpp
+	<iostream>
+	"Peliculas.h"
+	"Series.h"
+
+1654808497 d:\users\irahy\documents\github\proyecto-tc10130\peliculas.h
+	<sstream>
+	<fstream>
+	<string>
+	<stdio.h>
+	<iostream>
+	"Pelicula.h"
+
+1655340377 d:\users\irahy\documents\github\proyecto-tc10130\pelicula.h
+	<stdio.h>
+	<iostream>
+	"Video.h"
+
+1654051007 d:\users\irahy\documents\github\proyecto-tc10130\video.h
+	<stdio.h>
+	<iostream>
+	"Pelicula.h"
+
+1654793561 d:\users\irahy\documents\github\proyecto-tc10130\series.h
+	<stdio.h>
+	<iostream>
+	<sstream>
+	<fstream>
+	"Serie.h"
+
+1655352008 d:\users\irahy\documents\github\proyecto-tc10130\serie.h
+	<stdio.h>
+	<string>
+	<cstdlib>
+	<iostream>
+	"Video.h"
+	"Episodio.h"
+
+1655340331 source:d:\users\irahy\documents\github\proyecto-tc10130\pelicula.cpp
+	<string>
+	<cstdlib>
+	"Pelicula.h"
+
+1655340824 source:d:\users\irahy\documents\github\proyecto-tc10130\peliculas.cpp
+	"Peliculas.h"
+
+1655350443 source:d:\users\irahy\documents\github\proyecto-tc10130\serie.cpp
+	"Serie.h"
+	"Episodio.h"
+
+1655336065 source:d:\users\irahy\documents\github\proyecto-tc10130\video.cpp
+	<string>
+	<cstdlib>
+	"Video.h"
+
+1655351166 source:d:\users\irahy\documents\github\proyecto-tc10130\series.cpp
+	"Series.h"
+

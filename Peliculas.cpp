@@ -39,7 +39,7 @@ void Peliculas::leerArchivo(){
 
     //Abrir archivo de entrada
 
-    fin.open("C:\\Users\\Irahy\\Desktop\\TEC\\Materias\\Semestre 2\\Periodo 3\\POO\\Proyecto_2_Meromero\\Pelicula-1.csv",ios::in);
+    fin.open("D:\\Users\\Irahy\\Documents\\GitHub\\Proyecto-TC10130\\Pelicula-1.csv",ios::in);
 
     // inicializar el atributo cantidad 0
     cantidad = 0;
@@ -92,7 +92,7 @@ void Peliculas::leerArchivo(){
         cout << iR << "-" << arrPtrPeliculas[iR]->str() << endl;
     }*/
 }
-void Peliculas::reporteTodasLasPeliculas(){
+void Peliculas::reporteTodasLasPeliculas(){ // CALCULAR PROMEDIO **********
     for (int iR = 0; iR < cantidad;iR++){
         cout << arrPtrPeliculas[iR]->str() << endl;
     }
@@ -103,7 +103,7 @@ void Peliculas::reporteTodasLasPeliculas(){
 
 void Peliculas::reporteConCalificacion(double _calificacionPromedio){
     int count = 0;
-    for (int iR = 0; iR < cantidad;iR++){
+    for (int iR = 0; iR < cantidad; iR++){
         if(arrPtrPeliculas[iR]->getCalificacion() == _calificacionPromedio){
             cout << arrPtrPeliculas[iR]->str() << endl;
             count++;
