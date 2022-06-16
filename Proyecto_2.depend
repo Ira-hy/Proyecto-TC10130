@@ -1,143 +1,4 @@
 # depslib dependency file v1.0
-1654138432 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\episodio.cpp
-	<string>
-	<cstdlib>
-	"Episodio.h"
-
-1653581938 d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\episodio.h
-	<stdio.h>
-	<iostream>
-
-1654719720 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\main-2.cpp
-	<iostream>
-	"Peliculas.h"
-
-1654190029 d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\peliculas.h
-	<sstream>
-	<fstream>
-	<stdio.h>
-	<iostream>
-	"Pelicula.h"
-
-1654722365 d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\pelicula.h
-	<stdio.h>
-	<iostream>
-	"Video.h"
-
-1654051007 d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\video.h
-	<stdio.h>
-	<iostream>
-	"Pelicula.h"
-
-1654744108 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\pelicula.cpp
-	<string>
-	<cstdlib>
-	"Pelicula.h"
-
-1654724013 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\serie.cpp
-	"Serie.h"
-	"Episodio.h"
-
-1654724017 d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\serie.h
-	<stdio.h>
-	<string>
-	<cstdlib>
-	<iostream>
-	"Video.h"
-	"Episodio.h"
-
-1654028522 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\video.cpp
-	<string>
-	<cstdlib>
-	"Video.h"
-
-1654745958 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\peliculas.cpp
-	"Peliculas.h"
-
-1654742945 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\series.cpp
-	"Series.h"
-
-1654740356 d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\series.h
-	<stdio.h>
-	<iostream>
-	<sstream>
-	<fstream>
-	"Serie.h"
-
-1654297129 source:d:\users\irahy\desktop\tec\materias\semestre 2\perido 3\poo\proyecto_2\main.cpp
-	<stdio.h>
-	<string>
-	<iostream>
-	"Video.h"
-	"Serie.h"
-	"Pelicula.h"
-	"Peliculas.h"
-
-1654138432 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\episodio.cpp
-	<string>
-	<cstdlib>
-	"Episodio.h"
-
-1653581938 c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\episodio.h
-	<stdio.h>
-	<iostream>
-
-1654719720 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\main-2.cpp
-	<iostream>
-	"Peliculas.h"
-
-1654190029 c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\peliculas.h
-	<sstream>
-	<fstream>
-	<stdio.h>
-	<iostream>
-	"Pelicula.h"
-
-1654722365 c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\pelicula.h
-	<stdio.h>
-	<iostream>
-	"Video.h"
-
-1654051007 c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\video.h
-	<stdio.h>
-	<iostream>
-	"Pelicula.h"
-
-1654744108 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\pelicula.cpp
-	<string>
-	<cstdlib>
-	"Pelicula.h"
-
-1654746384 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\peliculas.cpp
-	"Peliculas.h"
-
-1654724013 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\serie.cpp
-	"Serie.h"
-	"Episodio.h"
-
-1654724017 c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\serie.h
-	<stdio.h>
-	<string>
-	<cstdlib>
-	<iostream>
-	"Video.h"
-	"Episodio.h"
-
-1654742945 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\series.cpp
-	"Series.h"
-
-1654740356 c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\series.h
-	<stdio.h>
-	<iostream>
-	<sstream>
-	<fstream>
-	"Serie.h"
-
-1654028522 source:c:\users\irahy\desktop\tec\materias\semestre 2\periodo 3\poo\proyecto_2_meromero\video.cpp
-	<string>
-	<cstdlib>
-	"Video.h"
-
 1655349070 source:d:\users\irahy\documents\github\proyecto-tc10130\episodio.cpp
 	<string>
 	<cstdlib>
@@ -197,11 +58,11 @@
 	"Serie.h"
 	"Episodio.h"
 
+1655355200 source:d:\users\irahy\documents\github\proyecto-tc10130\series.cpp
+	"Series.h"
+
 1655336065 source:d:\users\irahy\documents\github\proyecto-tc10130\video.cpp
 	<string>
 	<cstdlib>
 	"Video.h"
-
-1655355200 source:d:\users\irahy\documents\github\proyecto-tc10130\series.cpp
-	"Series.h"
 
