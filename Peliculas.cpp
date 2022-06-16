@@ -92,12 +92,17 @@ void Peliculas::leerArchivo(){
         cout << iR << "-" << arrPtrPeliculas[iR]->str() << endl;
     }*/
 }
-void Peliculas::reporteTodasLasPeliculas(){ // CALCULAR PROMEDIO **********
-    for (int iR = 0; iR < cantidad;iR++){
-        cout << arrPtrPeliculas[iR]->str() << endl;
+void Peliculas::reporteTodasLasPeliculas(){
+        double acum = 0;
+    for (int iR = 0; iR < cantidad; iR++){
+        cout << '*' << *arrPtrPeliculas[iR] << endl;
+        acum = acum + arrPtrPeliculas[iR]->getCalificacion();
     }
-    if (cantidad == 0){
-        cout << "No hay peliculas" << endl;
+    if (cantidad > 0){
+        cout << acum/cantidad << endl;
+    }
+    else {
+        cout << 0 << endl;
     }
 }
 

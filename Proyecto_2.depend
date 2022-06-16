@@ -190,10 +190,10 @@
 	<cstdlib>
 	"Pelicula.h"
 
-1655340824 source:d:\users\irahy\documents\github\proyecto-tc10130\peliculas.cpp
+1655355169 source:d:\users\irahy\documents\github\proyecto-tc10130\peliculas.cpp
 	"Peliculas.h"
 
-1655350443 source:d:\users\irahy\documents\github\proyecto-tc10130\serie.cpp
+1655355535 source:d:\users\irahy\documents\github\proyecto-tc10130\serie.cpp
 	"Serie.h"
 	"Episodio.h"
 
@@ -202,6 +202,6 @@
 	<cstdlib>
 	"Video.h"
 
-1655351166 source:d:\users\irahy\documents\github\proyecto-tc10130\series.cpp
+1655355200 source:d:\users\irahy\documents\github\proyecto-tc10130\series.cpp
 	"Series.h"
 

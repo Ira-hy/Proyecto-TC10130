@@ -14,9 +14,11 @@ Serie::Serie(string _iD, string _titulo,int _duracion, string _genero, double _c
 }
 
 void Serie::setEpisodio(int _index, Episodio _episodios){
-    if (cantidad >= 0 && _index < cantidad){
+    if (cantidad >= 0 && _index <= cantidad) {
         Episodios[_index] = _episodios;
-        cantidad = cantidad + 1;
+    }
+    else {
+        cout << "Ha ocurrido un problema" << endl;
     }
 }
 
@@ -42,15 +44,14 @@ int Serie::getCantidad(){
 
 double Serie::calculaCalPromedio(){
 	double acum = 0;
-	for (int index = 0; index > cantidad; index++){
+	for (int index = 0; index < cantidad; index++){
         acum = acum + Episodios[index].getCalificacion();
 	}
-
 	if (cantidad > 0){
         return acum/cantidad;
 	}
 	else{
-        return 0;
+        return 100;
 	}
 }
 

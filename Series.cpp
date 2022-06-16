@@ -70,15 +70,15 @@ void Series::leerArchivo(){
             arrPtrSeries[iS]->setEpisodio(cantEpisodios, *(episodio));
             arrPtrSeries[iS]->setCantidad(++cantEpisodios);
         }
-        cout << arrPtrSeries[iS]->str() << endl; // BORRAR **************************************************
+        //cout << arrPtrSeries[iS]->str() << endl; // BORRAR **************************************************
     }
     lectura.close();
 
     // desplegar todas las series con sus episodios         // BORRAR
     // manda a llamar al método str() de la clase serie     // BORRAR
-    for(int iS = 0; iS < cantidad; iS++){                   // BORRAR
+    /*for(int iS = 0; iS < cantidad; iS++){                   // BORRAR
         cout << arrPtrSeries[iS]->str() << endl;            // BORRAR
-    }
+    }*/
 }
 
 // Se asigna ese apuntador al arrPtrSeries[cantidad] en la posición actual que tenga
@@ -114,27 +114,16 @@ int Series::getCantidadSeries(){
 // despliega todas las series contenidas en el arreglo - usa ->str()
 void Series::reporteTodasLasSeries(){
     double acum = 0;
-    double mean = 0;
     for (int iR = 0; iR < cantidad; iR++){
         cout << '*' << *arrPtrSeries[iR] << endl;
         acum = acum + arrPtrSeries[iR]->getCalificacion();
     }
-    if (cantidad > 0) // IF DUDOSO
-    mean = acum/cantidad;
-    cout << "Promedio: " + to_string(mean) << endl;
-
-    /*for (int iR = 0; iR < cantidad; iR++){
-        cout << '*' << *arrPtrSeries[iR] << endl; // BUENARRDOOOOOOOOOO
-    }*/
-
-    /*int count = 0;
-    for (int iR = 0; iR < cantidad;iR++){
-            cout << arrPtrSeries[iR]->str()<< endl;
-            count++;
+    if (cantidad > 0){// IF DUDOSO
+        cout << acum/cantidad << endl;
     }
-    if (count == 0){
-        cout << "No hay Series" << endl;
-    }*/
+    else {
+        cout << 0 << endl;
+    }
 }
 
 // Reporte de todas las Series del arreglo arrPtrSeries que tiene cierta calificación
@@ -169,12 +158,8 @@ void Series::reporteGenero(string _genero){
 // Calcular la califción de cada serie en base a sus episodios
 // manda a llamar al método calculaPromedio de la serie de la clase Serie para
 // que se calcule la calificación promedio de la Serie
-void Series::calcularCalificacionSeries(){ // FALTA TERMINAR DE CODIFICAR
+void Series::calcularCalificacionSeries(){
     for (int iR = 0; iR < cantidad; iR++){
-        //cout << *arrPtrSeries[iR] << endl;
-        //cout << arrPtrSeries[iR]->str() << endl;
-        /*if (arrPtrSeries[iR]->getId() == Pelicula().getId()){
-            cout << arrPtrSeries[iR]->calculaCalPromedio() << endl;
-        }*/
+        cout << iR << " S - " <<arrPtrSeries[iR]->calculaCalPromedio() << endl;
     }
 }
